@@ -1,4 +1,4 @@
-Require sass
+require-sass
 ============================
 
 This is a Node.JS `require` extension that enables requiring sass files.
@@ -12,9 +12,25 @@ Install via npm:
 
 During the boot up process of your application, require `require-sass` once;
 
-    require('require-sass');
+    require('require-sass')(options, variables, extensions);
 
-After this point, you can require any .sass files.
+After this point, you can add options and variables then register the extensions.
+
+# Parameters
+### options
+Type: `Object`
+Default: `null`
+You can set node-sass options
+
+### variables
+Type: `Object`
+Default: `null`
+Extra variables which overwrite !default vars.
+
+### extensions
+Type: `Array`
+Default: `['.sass', '.scss']`
+Which extensions register to ```require.extensions```
 
 # Sample
 

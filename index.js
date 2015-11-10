@@ -21,21 +21,19 @@ function requireSass(m, f) {
   m.exports = result.css.toString();
 };
 
-function register(extensions) {
-  var extensions = extensions || ['.scss', '.sass'];
+module.exports = function(opts, vars, exts) {
+  options = merge(options, opts);
+  variables = merge(variables, vars);
+
+  var extensions = exts || ['.scss', '.sass'];
   for (var i = 0; i < extensions.length; i++) {
     require.extensions[extensions[i]] = requireSass;
   }
-}
-
-module.exports = function(opts, vars) {
-  options = merge(options, opts);
-  variables = merge(variables, vars);
 
   return {
     options: options,
     variables: variables,
-    register: register
+    exts: extensions
   }
 }
 

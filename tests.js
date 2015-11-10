@@ -19,8 +19,6 @@ options.bar = 'foo';
 assert.deepEqual(requireSass.options, options, 'Set options');
 assert.deepEqual(requireSass.variables, variables, 'Set variables');
 
-requireSass.register();
-
 var sample = require('./sample.scss');
 
 //Test sample scss
