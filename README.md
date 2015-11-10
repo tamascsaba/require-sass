@@ -19,6 +19,7 @@ After this point, all sass files is requireable.
 
 # Parameters
 ### options
+node-sass options
 Type: `Object`
 Default: `{
   includePaths: [__dirname],
@@ -28,17 +29,16 @@ Default: `{
   base64Encode: false,
   outputStyle: "compressed"
 }`
-You can set node-sass options
 
 ### variables
+Extra variables which overwrite !default vars.
 Type: `Object`
 Default: `null`
-Extra variables which overwrite !default vars.
 
 ### extensions
+Which extensions register to ```require.extensions```
 Type: `Array`
 Default: `['.sass', '.scss']`
-Which extensions register to ```require.extensions```
 
 # Sample
 
