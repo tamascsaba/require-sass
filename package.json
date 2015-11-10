@@ -1,6 +1,6 @@
 {
   "name": "require-sass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Require sass files in nodejs",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "url": "https://github.com/tamascsaba/require-sass/issues"
   },
   "homepage": "https://github.com/tamascsaba/require-sass",
+  "readmeFilename": "README.md",
   "dependencies": {
     "node-sass": "^3.4.1"
   }
