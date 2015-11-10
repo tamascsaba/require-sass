@@ -20,6 +20,7 @@ After this point, all sass files is requireable.
 # Parameters
 ### options
 node-sass options
+
 Type: `Object`
 Default: `{
   includePaths: [__dirname],
@@ -32,11 +33,13 @@ Default: `{
 
 ### variables
 Extra variables which overwrite !default vars.
+
 Type: `Object`
 Default: `null`
 
 ### extensions
 Which extensions register to ```require.extensions```
+
 Type: `Array`
 Default: `['.sass', '.scss']`
 
