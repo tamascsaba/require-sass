@@ -1,6 +1,6 @@
 {
   "name": "require-sass",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Require sass files in nodejs",
   "main": "index.js",
   "scripts": {

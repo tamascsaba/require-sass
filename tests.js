@@ -1,7 +1,6 @@
 var assert = require('assert');
 
 var defaultOptions = {
-  includePaths: [__dirname],
   sourceMap: false,
   sourceMapEmbed: false,
   sourceMapContents: false,

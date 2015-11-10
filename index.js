@@ -4,7 +4,6 @@ var merge = require('./merge');
 
 // Defaults
 var options = {
-  includePaths: [__dirname],
   sourceMap: false,
   sourceMapEmbed: false,
   sourceMapContents: false,

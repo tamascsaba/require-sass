@@ -24,7 +24,6 @@ node-sass options
 
 Type: `Object`
 Default: `{
-  includePaths: [__dirname],
   sourceMap: false,
   sourceMapEmbed: false,
   sourceMapContents: false,
