@@ -1,0 +1,27 @@
+{
+  "name": "require-sass",
+  "version": "0.0.0",
+  "description": "Require sass files in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamascsaba/require-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "node",
+    "require"
+  ],
+  "author": "Csaba Tamas <tamcsaba@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tamascsaba/require-sass/issues"
+  },
+  "homepage": "https://github.com/tamascsaba/require-sass",
+  "dependencies": {
+    "node-sass": "^3.4.1"
+  }
+}
