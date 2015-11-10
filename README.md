@@ -14,12 +14,20 @@ During the boot up process of your application, require `require-sass` once;
 
     require('require-sass')(options, variables, extensions);
 
-After this point, you can add options and variables then register the extensions.
+You can add options, variables and extensions all is optional.
+After this point, all sass files is requireable.
 
 # Parameters
 ### options
 Type: `Object`
-Default: `null`
+Default: `{
+  includePaths: [__dirname],
+  sourceMap: false,
+  sourceMapEmbed: false,
+  sourceMapContents: false,
+  base64Encode: false,
+  outputStyle: "compressed"
+}`
 You can set node-sass options
 
 ### variables
