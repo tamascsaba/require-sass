@@ -18,6 +18,7 @@ You can add options, variables and extensions all is optional.
 After this point, all sass files is requireable.
 
 # Parameters
+
 ### options
 node-sass options
 
@@ -35,7 +36,7 @@ Default: `{
 Extra variables which overwrite !default vars.
 
 Type: `Object`
-Default: `null`
+Default: `{}`
 
 ### extensions
 Which extensions register to ```require.extensions```
@@ -56,7 +57,7 @@ Default: `['.sass', '.scss']`
 #### app.js
 ```
     // Initialize
-    require('require-sass');
+    require('require-sass')();
 
     // Get sample.scss
     var sample = require("./sample.scss");

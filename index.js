@@ -2,6 +2,7 @@ var fs = require('fs');
 var sass = require('node-sass');
 var merge = require('./merge');
 
+// Defaults
 var options = {
   includePaths: [__dirname],
   sourceMap: false,
@@ -10,17 +11,9 @@ var options = {
   base64Encode: false,
   outputStyle: "compressed"
 };
-
 var variables = {};
 
-function requireSass(m, f) {
-  var data = sassVariables(variables) + sassImport(f);
-  var sassOptions = merge(options, {data: data});
-
-  var result = sass.renderSync(sassOptions);
-  m.exports = result.css.toString();
-};
-
+// Main export
 module.exports = function(opts, vars, exts) {
   options = merge(options, opts);
   variables = merge(variables, vars);
@@ -37,9 +30,15 @@ module.exports = function(opts, vars, exts) {
   }
 }
 
-/**
- * Helper functions
- */
+// Helper functions
+function requireSass(mod, file) {
+  var data = sassVariables(variables) + sassImport(file);
+  var sassOptions = merge(options, {data: data});
+  var result = sass.renderSync(sassOptions);
+
+  mod.exports = result.css.toString();
+};
+
 function sassVariable(name, value) {
   return "$" + name + ": " + value + ";";
 }
@@ -47,7 +46,7 @@ function sassVariable(name, value) {
 function sassVariables(variablesObj) {
   return Object.keys(variablesObj).map(function (name) {
     return sassVariable(name, variablesObj[name]);
-  }).join('\n')
+  }).join('\n');
 }
 
 function sassImport(path) {
